@@ -17,8 +17,8 @@ const Login = () => {
                         <input type="text" placeholder="Password" className="w-80 h-15 bg-gray-300 pl-5 rounded-md"/>
 
                         <div className="w-full flex flex-row justify-between mt-2 text-blue-900 underline">
-                            <div><a href="#">Esqueceu a senha?</a></div>
-                            <div><a href="#">Cadastrar</a></div>
+                            <div><a href="/esqueceusenha">Esqueceu a senha?</a></div>
+                            <div><a href="/cadastro">Cadastrar</a></div>
                         </div>
 
                 </div>

@@ -1,10 +1,11 @@
-
+import { User, Mail, Lock } from 'lucide-react';
+import backgroundImage from '../assets/library-background.png'
 
 export default function App() {
   return (
     <div 
       className="min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: "assets/library-background.png" }}
+      style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       <div className="bg-[#FFFFFF] rounded-[2.5rem] p-10 shadow-2xl w-full max-w-95 flex flex-col items-center">
         
@@ -40,6 +41,10 @@ export default function App() {
             />
           </div>
         </div>
+
+       <div className="relative flex items-center mt-2 text-blue-900 underline">
+       <div><a href="/">Já tenho uma conta</a></div>
+      </div>
 
         <button className="mt-12 mb-4 bg-[#D9D9D9] hover:bg-[#CFCFCF] text-gray-800 font-semibold py-3 px-10 rounded-xl transition-colors duration-200">
           Cadastrar
