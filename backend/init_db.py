@@ -1,6 +1,5 @@
 from app.core.database import engine, Base
 
-# Para testar o DB a IA me deu isso aqui:
 from app.models.associations import * 
 from app.models.autor import AutorModel
 from app.models.categoria import CategoriaModel
