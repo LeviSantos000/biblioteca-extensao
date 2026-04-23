@@ -1,7 +1,8 @@
-from sqlalchemy import Column, ForeignKey, Integer, String
-from sqlalchemy.orm import relationship
 from app.core.database import Base
 from app.models.associations import livro_categoria
+from sqlalchemy import Column, ForeignKey, Integer, String
+from sqlalchemy.orm import relationship
+
 
 class LivroModel(Base):
     __tablename__ = "livro"
@@ -13,10 +14,9 @@ class LivroModel(Base):
     quantidade_exemplares = Column(Integer, default=0, nullable=False)
     id_autor = Column(Integer, ForeignKey("autor.id_autor"), nullable=True)
 
+    # app/models/livro.py
     autor = relationship("AutorModel", back_populates="livros")
     categorias = relationship(
-        "CategoriaModel",
-        secondary=livro_categoria,
-        back_populates="livros"
+        "CategoriaModel", secondary=livro_categoria, back_populates="livros"
     )
     exemplares = relationship("ExemplarModel", back_populates="livro")
